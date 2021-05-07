@@ -11,7 +11,7 @@ function App() {
 	return (
 		<div>
 			<NavBar />
-			<Container>
+			<Container fluid>
 				<Row>
 					<Col>
 						<Home />
