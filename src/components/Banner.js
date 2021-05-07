@@ -8,8 +8,8 @@ function Banner() {
 	return (
 		<Row>
 			<Col>
-				<Jumbotron>
-					<h1>Course Booking System</h1>
+				<Jumbotron id="hero-image">
+					<h1 className="title">Course Booking System</h1>
 					<p>booking for everyone, everywhere!</p>
 					<Button variant="success">Get Started</Button>
 				</Jumbotron>

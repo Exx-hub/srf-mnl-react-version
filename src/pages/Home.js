@@ -4,10 +4,10 @@ import Featured from "../components/Featured";
 
 function Home() {
 	return (
-		<div>
+		<>
 			<Banner />
 			<Featured />
-		</div>
+		</>
 	);
 }
 
