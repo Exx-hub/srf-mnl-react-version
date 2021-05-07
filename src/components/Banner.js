@@ -4,17 +4,19 @@ import Col from "react-bootstrap/Col";
 import Jumbotron from "react-bootstrap/Jumbotron";
 import Button from "react-bootstrap/Button";
 
-import blackSchool from "../assets/images/blackschool.jpg";
-
-function Banner() {
+function Banner({ withButton, headerText, heroImage, bannerBg, cN, imgClass }) {
 	return (
-		<Row id="hero-row">
-			<Col id="hero-column">
-				<Jumbotron id="hero-image">
-					<div id="hero-text">
-						<img id="hero-school-image" src={blackSchool} alt="black logo" />
-						<h5>Find waves with us, book a class now!</h5>
-						<Button id="hero-button">Get Started</Button>
+		<Row className="hero-row">
+			<Col className="hero-column">
+				<Jumbotron className={bannerBg}>
+					<div className={cN}>
+						<img className={imgClass} src={heroImage} alt="logo logo" />
+						<h5>{headerText}</h5>
+						{withButton ? (
+							<Button className="hero-button">Get Started</Button>
+						) : (
+							""
+						)}
 					</div>
 				</Jumbotron>
 			</Col>

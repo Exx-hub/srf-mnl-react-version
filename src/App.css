@@ -4,11 +4,17 @@
 	box-sizing: border-box;
 }
 
+#navbar {
+	padding: 10px 30px;
+}
+
 .jumbotron {
 	border-radius: 0 !important;
 }
 
-#hero-image {
+/* HOME  */
+
+.home-hero-image {
 	background-image: url("./assets/images/hero.jpg");
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -16,16 +22,17 @@
 	height: 45vh;
 }
 
-#hero-column {
+/* .hero-column {
 	padding-right: 0;
 	padding-left: 0;
-}
+} */
 
-#hero-school-image {
+.hero-school-home-image {
 	width: 35%;
 	margin-bottom: 15px;
 }
-#hero-button {
+
+.hero-button {
 	background-color: white;
 	color: black;
 	border: none;
@@ -34,12 +41,13 @@
 	border: 1px solid lightgray;
 }
 
-#hero-text {
+.hero-text-home {
 	width: 50%;
 	text-align: center;
 	/* margin-top: 20px; */
 }
-#hero-text > h5 {
+
+.hero-text > h5 {
 	font-size: x-large;
 	color: black;
 }
@@ -48,3 +56,30 @@
 	border-radius: 10px;
 	box-shadow: 5px 10px 17px -7px rgba(0, 0, 0, 0.75);
 }
+
+/* COURSES  */
+
+.courses-hero-image {
+	background-image: url("./assets/images/courseHero.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	height: 40vh;
+}
+
+.hero-school-course-image {
+	width: 30%;
+}
+
+.hero-text-courses {
+	width: 80%;
+	text-align: center;
+	margin: 0 auto;
+}
+
+/* fix media queries for nav on mobile  */
+/* @media screen and (max-width: 500px) {
+	#navbar {
+		padding: 0px 15px;
+	}
+} */

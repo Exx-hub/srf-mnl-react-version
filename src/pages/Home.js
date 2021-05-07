@@ -1,14 +1,21 @@
 import React from "react";
 import Banner from "../components/Banner";
 import Featured from "../components/Featured";
-import Footer from "../components/Footer";
+
+import blackSchool from "../assets/images/blackschool.jpg";
 
 function Home() {
 	return (
 		<>
-			<Banner />
+			<Banner
+				headerText="Find waves with us, book a class now!"
+				heroImage={blackSchool}
+				bannerBg="home-hero-image"
+				withButton
+				cN="hero-text-home"
+				imgClass="hero-school-home-image"
+			/>
 			<Featured />
-			<Footer />
 		</>
 	);
 }

@@ -27,10 +27,7 @@ function Featured() {
 						</Card.Body>
 					</Card>
 					<Card className="myCards">
-						<Card.Img variant="top" src={ride} alt="sufing image" />
-						<Card.Body>
-							<Card.Title>Card Title</Card.Title>
-						</Card.Body>
+						<Card.Img variant="bottom" src={ride} alt="sufing image" />
 					</Card>
 				</CardDeck>
 			</Col>

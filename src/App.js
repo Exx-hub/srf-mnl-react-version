@@ -6,6 +6,8 @@ import NavBar from "./components/NavBar";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
+import Courses from "./pages/Courses";
+import Footer from "./components/Footer";
 
 function App() {
 	return (
@@ -15,9 +17,11 @@ function App() {
 				<Row>
 					<Col>
 						<Home />
+						{/* <Courses /> */}
 					</Col>
 				</Row>
 			</Container>
+			<Footer />
 		</div>
 	);
 }
