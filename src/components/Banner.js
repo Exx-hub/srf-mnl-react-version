@@ -13,7 +13,7 @@ function Banner() {
 				<Jumbotron id="hero-image">
 					<img id="hero-school-image" src={blackSchool} alt="black logo" />
 					<h5>Find waves with us, book a class now!</h5>
-					<Button variant="success">Get Started</Button>
+					<Button id="hero-button">Get Started</Button>
 				</Jumbotron>
 			</Col>
 		</Row>
