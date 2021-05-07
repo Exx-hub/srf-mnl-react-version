@@ -5,49 +5,32 @@ import Col from "react-bootstrap/Col";
 import Card from "react-bootstrap/Card";
 import CardDeck from "react-bootstrap/CardDeck";
 
+import book from "../assets/images/bookCourse.jpg";
+import find from "../assets/images/findCourse.jpg";
+import ride from "../assets/images/rideWaves.jpg";
+
 function Featured() {
 	return (
 		<Row>
 			<Col>
-				<CardDeck>
-					<Card>
-						<Card.Img variant="top" src="" alt="image 1" />
+				<CardDeck id="cardDeck">
+					<Card className="myCards">
+						<Card.Img variant="top" src={find} alt="surf boards images" />
 						<Card.Body>
 							<Card.Title>Card Title</Card.Title>
-							<Card.Text>
-								This is a wider card supporting text below as a natural lead-in
-								to additional content. This is a little bit longer.
-							</Card.Text>
 						</Card.Body>
-						<Card.Footer>
-							<small className="text-muted">Last updated 3 mins ago</small>
-						</Card.Footer>
 					</Card>
-					<Card>
-						<Card.Img variant="top" src="" alt="image 1" />
+					<Card className="myCards">
+						<Card.Img variant="top" src={book} alt="sufing lessons image" />
 						<Card.Body>
 							<Card.Title>Card Title</Card.Title>
-							<Card.Text>
-								This is a wider card supporting text below as a natural lead-in
-								to additional content. This is a little bit longer.
-							</Card.Text>
 						</Card.Body>
-						<Card.Footer>
-							<small className="text-muted">Last updated 3 mins ago</small>
-						</Card.Footer>
 					</Card>
-					<Card>
-						<Card.Img variant="top" src="" alt="image 1" />
+					<Card className="myCards">
+						<Card.Img variant="top" src={ride} alt="sufing image" />
 						<Card.Body>
 							<Card.Title>Card Title</Card.Title>
-							<Card.Text>
-								This is a wider card supporting text below as a natural lead-in
-								to additional content. This is a little bit longer.
-							</Card.Text>
 						</Card.Body>
-						<Card.Footer>
-							<small className="text-muted">Last updated 3 mins ago</small>
-						</Card.Footer>
 					</Card>
 				</CardDeck>
 			</Col>

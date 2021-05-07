@@ -11,9 +11,11 @@ function Banner() {
 		<Row id="hero-row">
 			<Col id="hero-column">
 				<Jumbotron id="hero-image">
-					<img id="hero-school-image" src={blackSchool} alt="black logo" />
-					<h5>Find waves with us, book a class now!</h5>
-					<Button id="hero-button">Get Started</Button>
+					<div id="hero-text">
+						<img id="hero-school-image" src={blackSchool} alt="black logo" />
+						<h5>Find waves with us, book a class now!</h5>
+						<Button id="hero-button">Get Started</Button>
+					</div>
 				</Jumbotron>
 			</Col>
 		</Row>

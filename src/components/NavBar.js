@@ -9,6 +9,7 @@ function NavBar() {
 			<Navbar.Brand href="#home">
 				<img src={whiteRec} width="130" className="ml-1 p-2" alt="brand logo" />
 			</Navbar.Brand>
+
 			<Navbar.Toggle aria-controls="responsive-navbar-nav" />
 
 			<Navbar.Collapse id="responsive-navbar-nav">
