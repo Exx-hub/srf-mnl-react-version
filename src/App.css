@@ -4,10 +4,23 @@
 	box-sizing: border-box;
 }
 
+.jumbotron {
+	border-radius: 0 !important;
+}
+
 #hero-image {
 	background-image: url("./assets/images/hero.jpg");
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center;
 	height: 45vh;
+}
+
+#hero-column {
+	padding-right: 0;
+	padding-left: 0;
+}
+
+#hero-school-image {
+	width: 15%;
 }
