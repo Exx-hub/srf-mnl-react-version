@@ -9,25 +9,31 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Courses from "./pages/Courses";
 import Footer from "./components/Footer";
+import Login from "./components/Login";
+import Profile from "./components/Profile";
+import Register from "./components/Register";
 
 function App() {
 	return (
-		<Router>
-			<div>
+		<div>
+			<Router>
 				<NavBar />
-				<Switch>
-					<Container fluid>
-						<Row>
-							<Col>
+				<Container fluid>
+					<Row>
+						<Col>
+							<Switch>
 								<Route exact path="/" component={Home} />
 								<Route path="/courses" component={Courses} />
-							</Col>
-						</Row>
-					</Container>
-				</Switch>
+								<Route path="/profile" component={Profile} />
+								<Route path="/register" component={Register} />
+								<Route path="/login" component={Login} />
+							</Switch>
+						</Col>
+					</Row>
+				</Container>
 				<Footer />
-			</div>
-		</Router>
+			</Router>
+		</div>
 	);
 }
 
