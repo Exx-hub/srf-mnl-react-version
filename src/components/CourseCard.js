@@ -3,7 +3,7 @@ import React from "react";
 function CourseCard({ course }) {
 	return (
 		<>
-			<h3>{course.name}</h3>
+			<h4>{course.name}</h4>
 			<p>{course.description}</p>
 		</>
 	);
