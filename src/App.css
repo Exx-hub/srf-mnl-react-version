@@ -53,8 +53,11 @@
 }
 
 .myCards {
-	border-radius: 10px;
 	box-shadow: 5px 10px 17px -7px rgba(0, 0, 0, 0.75);
+	border: none;
+}
+.card-img {
+	border-radius: 0;
 }
 
 /* COURSES  */

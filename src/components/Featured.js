@@ -15,19 +15,22 @@ function Featured() {
 			<Col>
 				<CardDeck id="cardDeck">
 					<Card className="myCards">
-						<Card.Img variant="top" src={find} alt="surf boards images" />
-						<Card.Body>
-							<Card.Title>Card Title</Card.Title>
-						</Card.Body>
+						<Card.Img src={find} alt="surf boards images" />
+						<Card.ImgOverlay>
+							<Card.Title>Find A Course</Card.Title>
+						</Card.ImgOverlay>
 					</Card>
 					<Card className="myCards">
-						<Card.Img variant="top" src={book} alt="sufing lessons image" />
-						<Card.Body>
-							<Card.Title>Card Title</Card.Title>
-						</Card.Body>
+						<Card.Img src={book} alt="sufing lessons image" />
+						<Card.ImgOverlay>
+							<Card.Title>Book The Course</Card.Title>
+						</Card.ImgOverlay>
 					</Card>
 					<Card className="myCards">
-						<Card.Img variant="bottom" src={ride} alt="sufing image" />
+						<Card.Img src={ride} alt="sufing image" />
+						<Card.ImgOverlay>
+							<Card.Title>Ride The Waves</Card.Title>
+						</Card.ImgOverlay>
 					</Card>
 				</CardDeck>
 			</Col>
