@@ -12,6 +12,11 @@
 	border-radius: 0 !important;
 }
 
+.footer-text {
+	font-size: 0.8em;
+	color: gray;
+}
+
 /* HOME  */
 
 .home-hero-image {
