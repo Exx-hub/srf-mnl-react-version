@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import CourseCard from "./CourseCard";
-
+import Col from "react-bootstrap/Col";
+import Row from "react-bootstrap/Row";
 function CourseCards() {
 	const [courses, setCourses] = useState([]);
 	console.log(courses);
@@ -12,12 +13,19 @@ function CourseCards() {
 				setCourses(data.courses);
 			});
 	}, []);
+
 	return (
 		<div>
 			<h2>LIST OF ACTIVE COURSES</h2>
-			{courses.map((course, index) => {
-				return <CourseCard key={index} course={course} />;
-			})}
+			<Row>
+				{courses.map((course, index) => {
+					return (
+						<Col sm={12} md={4} lg={3} key={index}>
+							<CourseCard course={course} />
+						</Col>
+					);
+				})}
+			</Row>
 		</div>
 	);
 }
