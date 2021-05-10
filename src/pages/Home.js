@@ -11,7 +11,6 @@ function Home() {
 				headerText="Find waves with us, book a class now!"
 				heroImage={blackSchool}
 				bannerBg="home-hero-image"
-				withButton
 				cN="hero-text-home"
 				imgClass="hero-school-home-image"
 			/>

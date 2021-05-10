@@ -5,10 +5,9 @@ import Jumbotron from "react-bootstrap/Jumbotron";
 import Button from "react-bootstrap/Button";
 import { useHistory, useLocation } from "react-router";
 
-function Banner({ withButton, headerText, heroImage, bannerBg, cN, imgClass }) {
+function Banner({ headerText, heroImage, bannerBg, cN, imgClass }) {
 	const history = useHistory();
 	const location = useLocation();
-	console.log(location);
 
 	return (
 		<Row className="hero-row">
