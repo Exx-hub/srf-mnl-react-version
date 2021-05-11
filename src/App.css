@@ -11,7 +11,7 @@ body {
 }
 
 #navbar {
-	padding: 10px 30px;
+	padding: 15px 30px;
 }
 
 .nav-link {
@@ -121,3 +121,15 @@ body {
 	padding-right: 0;
 	padding-left: 0;
 } */
+
+@media screen and (max-width: 500px) {
+	#navbar {
+		padding: 10px 15px;
+	}
+	.coursesOffered {
+		margin-top: 0 !important;
+	}
+	.courseCards {
+		margin-top: 0px !important;
+	}
+}

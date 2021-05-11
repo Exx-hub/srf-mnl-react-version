@@ -12,6 +12,7 @@ import Footer from "./components/Footer";
 import Login from "./components/Login";
 import Profile from "./components/Profile";
 import Register from "./components/Register";
+import ViewCourse from "./pages/ViewCourse";
 
 function App() {
 	return (
@@ -23,10 +24,11 @@ function App() {
 						<Col>
 							<Switch>
 								<Route exact path="/" component={Home} />
-								<Route path="/courses" component={Courses} />
+								<Route exact path="/courses" component={Courses} />
 								<Route path="/profile" component={Profile} />
 								<Route path="/register" component={Register} />
 								<Route path="/login" component={Login} />
+								<Route path="/courses/:courseId" component={ViewCourse} />
 							</Switch>
 						</Col>
 					</Row>

@@ -28,7 +28,7 @@ function CourseCards() {
 	return (
 		<div>
 			<Container>
-				<h2 className="text-center coursesOffered">Courses Offered: </h2>
+				<h2 className="text-center coursesOffered my-3">Courses Offered: </h2>
 				<Row>{courses.length !== 0 ? courseList : <SpinnerComponent />}</Row>
 			</Container>
 		</div>
