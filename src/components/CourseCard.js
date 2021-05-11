@@ -5,7 +5,7 @@ import Button from "react-bootstrap/Button";
 function CourseCard({ course }) {
 	return (
 		<>
-			<Card className="my-3">
+			<Card className="my-5 courseCards">
 				<Card.Body>
 					<Card.Title>{course.name}</Card.Title>
 					<Card.Text>{course.description}</Card.Text>

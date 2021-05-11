@@ -95,6 +95,11 @@ body {
 }
 .coursesOffered {
 	color: rgba(87, 87, 87);
+	font-weight: 600;
+}
+.courseCards {
+	box-shadow: 5px 10px 17px -7px rgba(0, 0, 0, 0.75);
+	border: none;
 }
 #viewButton {
 	background-color: #0a51b0;
