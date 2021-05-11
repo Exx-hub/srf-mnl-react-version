@@ -5,7 +5,7 @@ import whiteRec from "../assets/images/whiteRec.png";
 
 function NavBar() {
 	return (
-		<Navbar id="navbar" collapseOnSelect expand="md" variant="light">
+		<Navbar id="navbar" collapseOnSelect expand="md">
 			<Navbar.Brand href="/">
 				<img src={whiteRec} width="130" className="ml-1 p-2" alt="brand logo" />
 			</Navbar.Brand>

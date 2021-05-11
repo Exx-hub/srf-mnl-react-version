@@ -2,6 +2,9 @@ import React, { useEffect, useState } from "react";
 import CourseCard from "./CourseCard";
 import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
+import Container from "react-bootstrap/Container";
+import SpinnerComponent from "./SpinnerComponent";
+
 function CourseCards() {
 	const [courses, setCourses] = useState([]);
 	console.log(courses);
@@ -14,18 +17,20 @@ function CourseCards() {
 			});
 	}, []);
 
+	const courseList = courses.map((course, index) => {
+		return (
+			<Col sm={12} md={6} lg={6} key={index}>
+				<CourseCard course={course} />
+			</Col>
+		);
+	});
+
 	return (
 		<div>
-			<h2>LIST OF ACTIVE COURSES</h2>
-			<Row>
-				{courses.map((course, index) => {
-					return (
-						<Col sm={12} md={4} lg={3} key={index}>
-							<CourseCard course={course} />
-						</Col>
-					);
-				})}
-			</Row>
+			<Container>
+				<h2 className="text-center coursesOffered">Courses Offered: </h2>
+				<Row>{courses.length !== 0 ? courseList : <SpinnerComponent />}</Row>
+			</Container>
 		</div>
 	);
 }

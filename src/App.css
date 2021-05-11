@@ -1,11 +1,24 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&family=Open+Sans:wght@300;400;600;700&display=swap");
+
 * {
 	padding: 0;
 	margin: 0;
 	box-sizing: border-box;
 }
 
+body {
+	font-family: "Montserrat", sans-serif;
+}
+
 #navbar {
 	padding: 10px 30px;
+}
+
+.nav-link {
+	font-family: "Open Sans", sans-serif;
+	font-weight: 800 !important;
+	text-transform: uppercase;
+	letter-spacing: 2px;
 }
 
 .jumbotron {
@@ -26,11 +39,6 @@
 	background-position: center;
 	height: 45vh;
 }
-
-/* .hero-column {
-	padding-right: 0;
-	padding-left: 0;
-} */
 
 .hero-school-home-image {
 	width: 35%;
@@ -84,10 +92,22 @@
 	text-align: center;
 	margin: 0 auto;
 }
+.coursesOffered {
+	color: rgba(87, 87, 87);
+}
+#viewButton {
+	background-color: #0a51b0;
+	border: 1px solid #0a51b0;
+}
 
 /* fix media queries for nav on mobile  */
 /* @media screen and (max-width: 500px) {
 	#navbar {
 		padding: 0px 15px;
 	}
+} */
+
+/* .hero-column {
+	padding-right: 0;
+	padding-left: 0;
 } */

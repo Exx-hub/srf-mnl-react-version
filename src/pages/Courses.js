@@ -1,19 +1,19 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import Banner from "../components/Banner";
 
-import blackSchool from "../assets/images/blackschool.jpg";
+import whiteSchool from "../assets/images/whiteSchool.jpg";
 import CourseCards from "../components/CourseCards";
 
 function Courses() {
 	return (
 		<>
 			<Banner
-				heroImage={blackSchool}
+				heroImage={whiteSchool}
 				bannerBg="courses-hero-image"
 				cN="hero-text-courses"
 				imgClass="hero-school-course-image"
 			/>
-			<CourseCards />;
+			<CourseCards />
 		</>
 	);
 }

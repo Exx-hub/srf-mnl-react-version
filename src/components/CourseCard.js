@@ -5,12 +5,17 @@ import Button from "react-bootstrap/Button";
 function CourseCard({ course }) {
 	return (
 		<>
-			<Card>
+			<Card className="my-3">
 				<Card.Body>
 					<Card.Title>{course.name}</Card.Title>
 					<Card.Text>{course.description}</Card.Text>
+					<Card.Text className="text-right">₱ {course.price}</Card.Text>
 				</Card.Body>
-				<Button>View Course</Button>
+				<Card.Footer>
+					<Button className="col-sm-12 col-md-4 mb-1" id="viewButton">
+						View
+					</Button>
+				</Card.Footer>
 			</Card>
 		</>
 	);
