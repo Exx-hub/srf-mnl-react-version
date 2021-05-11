@@ -7,12 +7,10 @@ import SpinnerComponent from "./SpinnerComponent";
 
 function CourseCards() {
 	const [courses, setCourses] = useState([]);
-	console.log(courses);
 	useEffect(() => {
 		fetch("https://backup-capstone-vscode.herokuapp.com/api/courses")
 			.then((res) => res.json())
 			.then((data) => {
-				console.log(data);
 				setCourses(data.courses);
 			});
 	}, []);

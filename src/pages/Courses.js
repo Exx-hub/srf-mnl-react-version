@@ -13,7 +13,7 @@ function Courses() {
 				cN="hero-text-courses"
 				imgClass="hero-school-course-image"
 			/>
-			<CourseCards />
+			<CourseCards />;
 		</>
 	);
 }

@@ -101,7 +101,8 @@ body {
 	box-shadow: 5px 10px 17px -7px rgba(0, 0, 0, 0.75);
 	border: none;
 }
-#viewButton {
+#viewButton,
+.siteButton {
 	background-color: #0a51b0;
 	border: 1px solid #0a51b0;
 }
