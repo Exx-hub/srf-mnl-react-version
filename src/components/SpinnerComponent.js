@@ -5,7 +5,7 @@ function SpinnerComponent() {
 	return (
 		<Jumbotron className="ml-auto mr-auto col-sm-10 text-center">
 			<h2>
-				<span class="spinner-border text-dark mr-3"></span>
+				<span className="spinner-border text-dark mr-3"></span>
 				Fetching resources...
 			</h2>
 		</Jumbotron>
