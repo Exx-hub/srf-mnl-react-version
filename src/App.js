@@ -8,7 +8,7 @@ import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Courses from "./pages/Courses";
-import Footer from "./components/Footer";
+// import Footer from "./components/Footer";
 import Login from "./components/Login";
 import Profile from "./components/Profile";
 import Register from "./components/Register";
