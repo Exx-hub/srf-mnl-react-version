@@ -199,6 +199,13 @@ input::-webkit-inner-spin-button {
 		width: 45%;
 		margin-top: 25px;
 	}
+	.hero-text-home {
+		width: 60%;
+		margin-top: 7px;
+	}
+	.hero-button {
+		font-size: 0.9em;
+	}
 }
 
 /* average mobiles and below  */
