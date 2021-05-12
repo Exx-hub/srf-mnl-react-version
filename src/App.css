@@ -131,6 +131,10 @@ body {
 	right: 15px;
 }
 
+.enrolleeTable {
+	border: none;
+}
+
 /* LOGIN  */
 .loginForm {
 	display: flex;

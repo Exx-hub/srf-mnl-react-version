@@ -5,15 +5,15 @@ import SpinnerComponent from "../components/SpinnerComponent";
 import Jumbotron from "react-bootstrap/Jumbotron";
 
 import logo from "../assets/images/logo1.png";
-import Footer from "../components/Footer";
+// import Footer from "../components/Footer";
+
+import Enrollees from "../components/Enrollees";
 
 function ViewCourse(props) {
 	const { courseId } = props.match.params;
 
 	const [course, setCourse] = useState(null);
-	// console.log(course);
-
-	// random image array
+	console.log(course);
 
 	useEffect(() => {
 		fetch(
@@ -21,7 +21,6 @@ function ViewCourse(props) {
 		)
 			.then((res) => res.json())
 			.then((data) => {
-				console.log(data);
 				setCourse(data.course);
 			});
 	}, [courseId]);
@@ -29,13 +28,17 @@ function ViewCourse(props) {
 	return (
 		<div className="viewCourseBody">
 			{course ? (
-				<Jumbotron className="col-md-5 mr-auto ml-auto mt-4 p-4 viewCourseJumbo">
-					<img className="logo" src={logo} alt="circle logo" />
-					<h3 className="mt-4">{course.name}</h3>
-					<p>{course.description}</p>
-					<p>₱ {course.price}</p>
-					<Button className="btn-block siteButton">Enroll</Button>
-				</Jumbotron>
+				<>
+					<Jumbotron className="col-md-5 mr-auto ml-auto mt-4 p-4 viewCourseJumbo">
+						<img className="logo" src={logo} alt="circle logo" />
+						<h3 className="mt-4">{course.name}</h3>
+						<p>{course.description}</p>
+						<p>₱ {course.price}</p>
+						<Button className="btn-block siteButton">Enroll</Button>
+					</Jumbotron>
+
+					<Enrollees enrollees={course.enrollees} />
+				</>
 			) : (
 				<SpinnerComponent />
 			)}
