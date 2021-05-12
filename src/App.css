@@ -31,6 +31,12 @@ body {
 	color: gray;
 }
 
+.siteInput {
+	border: none;
+	border-bottom: 1px solid lightgray;
+	outline: none;
+}
+
 /* HOME  */
 
 .home-hero-image {
@@ -117,6 +123,24 @@ body {
 	position: absolute;
 	top: 15px;
 	right: 15px;
+}
+
+/* LOGIN  */
+.loginForm {
+	display: flex;
+	flex-direction: column;
+}
+
+/* REGISTER  */
+.registerForm {
+	display: flex;
+	flex-direction: column;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+	-webkit-appearance: none;
+	margin: 0;
 }
 
 /* fix media queries for nav on mobile  */
