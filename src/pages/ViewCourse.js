@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from "react";
-import Card from "react-bootstrap/Card";
+
 import Button from "react-bootstrap/Button";
 import SpinnerComponent from "../components/SpinnerComponent";
 import Jumbotron from "react-bootstrap/Jumbotron";
+
+import logo from "../assets/images/logo1.png";
 
 function ViewCourse(props) {
 	const { courseId } = props.match.params;
@@ -26,9 +28,9 @@ function ViewCourse(props) {
 	return (
 		<div>
 			{course ? (
-				<Jumbotron className="col-md-5 mr-auto ml-auto mt-4">
-					{/* image  */}
-					<h3>{course.name}</h3>
+				<Jumbotron className="col-md-5 mr-auto ml-auto mt-4 p-4">
+					<img className="logo" src={logo} alt="circle logo" />
+					<h3 className="mt-4">{course.name}</h3>
 					<p>{course.description}</p>
 					<p>₱ {course.price}</p>
 					<Button className="btn-block siteButton">Enroll</Button>

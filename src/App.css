@@ -111,6 +111,14 @@ body {
 	color: #0a51b0;
 }
 
+/* VIEW COURSE  */
+.logo {
+	height: 60px;
+	position: absolute;
+	top: 15px;
+	right: 15px;
+}
+
 /* fix media queries for nav on mobile  */
 /* @media screen and (max-width: 500px) {
 	#navbar {
