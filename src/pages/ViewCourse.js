@@ -5,6 +5,7 @@ import SpinnerComponent from "../components/SpinnerComponent";
 import Jumbotron from "react-bootstrap/Jumbotron";
 
 import logo from "../assets/images/logo1.png";
+import Footer from "../components/Footer";
 
 function ViewCourse(props) {
 	const { courseId } = props.match.params;
@@ -26,9 +27,9 @@ function ViewCourse(props) {
 	}, [courseId]);
 
 	return (
-		<div>
+		<div className="viewCourseBody">
 			{course ? (
-				<Jumbotron className="col-md-5 mr-auto ml-auto mt-4 p-4">
+				<Jumbotron className="col-md-5 mr-auto ml-auto mt-4 p-4 viewCourseJumbo">
 					<img className="logo" src={logo} alt="circle logo" />
 					<h3 className="mt-4">{course.name}</h3>
 					<p>{course.description}</p>

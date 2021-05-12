@@ -3,6 +3,7 @@ import Banner from "../components/Banner";
 import Featured from "../components/Featured";
 
 import blackSchool from "../assets/images/blackschool.jpg";
+import Footer from "../components/Footer";
 
 function Home() {
 	return (
@@ -15,6 +16,7 @@ function Home() {
 				imgClass="hero-school-home-image"
 			/>
 			<Featured />
+			<Footer />
 		</>
 	);
 }

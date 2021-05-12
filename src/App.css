@@ -141,4 +141,8 @@ body {
 	.courseCards {
 		margin-top: 0px !important;
 	}
+
+	.viewCourseJumbo {
+		margin-top: 0 !important;
+	}
 }
