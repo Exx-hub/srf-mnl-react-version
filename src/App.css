@@ -25,6 +25,9 @@ body {
 	border-radius: 0 !important;
 	box-shadow: 5px 10px 17px -7px rgba(0, 0, 0, 0.75);
 }
+.headerText {
+	font-weight: 800;
+}
 
 .footer-text {
 	font-size: 0.8em;
@@ -64,12 +67,6 @@ body {
 .hero-text-home {
 	width: 50%;
 	text-align: center;
-	/* margin-top: 20px; */
-}
-
-.hero-text > h5 {
-	font-size: x-large;
-	color: black;
 }
 
 .myCards {
@@ -78,6 +75,15 @@ body {
 }
 .card-img {
 	border-radius: 0;
+}
+
+.cardTitle {
+	color: rgb(240, 239, 239);
+	position: absolute;
+	bottom: 20px;
+	margin: 0 auto;
+	text-align: center;
+	text-shadow: 1px 2px #000;
 }
 
 /* COURSES  */
@@ -143,21 +149,62 @@ input::-webkit-inner-spin-button {
 	margin: 0;
 }
 
-/* fix media queries for nav on mobile  */
-/* @media screen and (max-width: 500px) {
-	#navbar {
-		padding: 0px 15px;
-	}
-} */
-
 /* .hero-column {
 	padding-right: 0;
 	padding-left: 0;
 } */
 
+/* MEDIA QUERIES  */
+
+/* wide laptop */
+@media screen and (max-width: 1200px) {
+	.home-hero-image {
+		height: 50vh;
+	}
+}
+
+/* small laptop */
+@media screen and (max-width: 900px) {
+	.home-hero-image {
+		height: 60vh;
+	}
+	.hero-text-home {
+		margin-top: 25px;
+	}
+	.hero-school-home-image {
+		width: 40%;
+	}
+}
+@media screen and (max-width: 670px) {
+	.hero-school-home-image {
+		width: 50%;
+	}
+	.home-hero-image {
+		height: 62vh;
+	}
+	.cardTitle {
+		font-size: 1em;
+	}
+	.hero-school-course-image {
+		width: 40%;
+	}
+}
+
+/* wide phone  */
+@media screen and (max-width: 575px) {
+	.home-hero-image {
+		height: 40vh;
+	}
+	.hero-school-course-image {
+		width: 45%;
+		margin-top: 25px;
+	}
+}
+
+/* average mobiles and below  */
 @media screen and (max-width: 500px) {
 	#navbar {
-		padding: 10px 15px;
+		padding: 6px 20px;
 	}
 	.coursesOffered {
 		margin-top: 0 !important;
@@ -168,5 +215,29 @@ input::-webkit-inner-spin-button {
 
 	.viewCourseJumbo {
 		margin-top: 0 !important;
+	}
+	.hero-school-home-image {
+		width: 70%;
+	}
+	.headerText {
+		font-size: 1em;
+	}
+	.navbar-toggler-icon {
+		width: 1em;
+		height: 1em;
+	}
+	.navbar-toggler {
+		font-size: 1rem;
+		padding: 0.2rem 0.5rem;
+	}
+	.nav-logo {
+		width: 120px;
+	}
+	.nav-link {
+		font-size: 0.8em;
+		padding: 0.4rem 0.7rem;
+	}
+	.hero-school-course-image {
+		width: 52%;
 	}
 }

@@ -17,19 +17,20 @@ function Featured() {
 					<Card className="myCards">
 						<Card.Img src={find} alt="surf boards images" />
 						<Card.ImgOverlay>
-							<Card.Title>Find A Course</Card.Title>
+							<Card.Title className="cardTitle">Find A Course</Card.Title>
 						</Card.ImgOverlay>
 					</Card>
+
 					<Card className="myCards">
 						<Card.Img src={book} alt="sufing lessons image" />
 						<Card.ImgOverlay>
-							<Card.Title>Book The Course</Card.Title>
+							<Card.Title className="cardTitle">Book The Course</Card.Title>
 						</Card.ImgOverlay>
 					</Card>
 					<Card className="myCards">
 						<Card.Img src={ride} alt="sufing image" />
 						<Card.ImgOverlay>
-							<Card.Title>Ride The Waves</Card.Title>
+							<Card.Title className="cardTitle">Ride The Waves</Card.Title>
 						</Card.ImgOverlay>
 					</Card>
 				</CardDeck>

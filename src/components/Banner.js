@@ -15,7 +15,7 @@ function Banner({ headerText, heroImage, bannerBg, cN, imgClass }) {
 				<Jumbotron className={bannerBg}>
 					<div className={cN}>
 						<img className={imgClass} src={heroImage} alt="logo logo" />
-						<h5>{headerText}</h5>
+						<h5 className="headerText">{headerText}</h5>
 						{location.pathname === "/" ? (
 							<Button
 								onClick={() => history.push("/courses")}

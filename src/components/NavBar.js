@@ -5,9 +5,14 @@ import whiteRec from "../assets/images/whiteRec.png";
 
 function NavBar() {
 	return (
-		<Navbar id="navbar" collapseOnSelect expand="md">
+		<Navbar id="navbar" collapseOnSelect expand="lg">
 			<Navbar.Brand href="/">
-				<img src={whiteRec} width="130" className="ml-1 p-2" alt="brand logo" />
+				<img
+					src={whiteRec}
+					width="130"
+					className="ml-1 p-2 nav-logo"
+					alt="brand logo"
+				/>
 			</Navbar.Brand>
 
 			<Navbar.Toggle aria-controls="responsive-navbar-nav" />
