@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Button from "react-bootstrap/Button";
+import { useHistory } from "react-router";
 import { validate } from "../helpers/validate";
 
 function Register() {
@@ -12,6 +13,8 @@ function Register() {
 
 	const [isSubmitting, setIsSubmitting] = useState(false);
 	const [errors, setErrors] = useState({});
+
+	const history = useHistory();
 
 	const handleSubmit = (e) => {
 		e.preventDefault();
@@ -39,18 +42,18 @@ function Register() {
 				password,
 			}); // mimics fetch post request to server
 
+			// do fetch post here if validation ok! then redirect
+
+			alert("registration successful!"); // can do a modal or popup here
+			history.push("/login");
+
 			setIsSubmitting(false);
-			setFirstName("");
-			setLastName("");
-			setMobileNumber("");
-			setEmailAddress("");
-			setPassword("");
-			setConfirmPass("");
 		}
 	}, [
 		emailAddress,
 		errors,
 		firstName,
+		history,
 		isSubmitting,
 		lastName,
 		mobileNumber,
