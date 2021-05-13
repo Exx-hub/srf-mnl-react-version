@@ -31,9 +31,14 @@ export const useRegisterForm = () => {
 
 	useEffect(() => {
 		if (Object.keys(errors).length === 0 && isSubmitting) {
-			console.log(values);
+			console.log(values); // fetch post request here using values as body
+
+			// then if success --
 			alert("registration successful");
 			history.push("/login");
+
+			// if not
+			// ----
 		}
 	}, [errors, history, isSubmitting, values]);
 

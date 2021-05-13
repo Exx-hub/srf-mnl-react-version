@@ -1,7 +1,7 @@
 export const validate = (values) => {
 	let errors = {};
 
-	if (Object.keys(values) !== 0) {
+	if (Object.keys(values).length !== 0) {
 		if (!values.firstName) {
 			errors.firstName = "Firstname is required!";
 		}
