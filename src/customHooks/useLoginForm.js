@@ -27,14 +27,36 @@ export const useLoginform = () => {
 			console.log({
 				emailAddress: values.emailAddress,
 				password: values.password,
-			}); // fetch post request here using values as body
+			});
 
-			// then if success --
-			alert("successful login!");
-			history.push("/profile");
+			fetch("https://backup-capstone-vscode.herokuapp.com/api/users/login", {
+				method: "POST",
+				headers: {
+					"Content-Type": "application/json",
+				},
+				body: JSON.stringify({
+					emailAddress: values.emailAddress,
+					password: values.password,
+				}),
+			})
+				.then((res) => res.json())
+				.then((data) => {
+					console.log(data);
 
-			// if not --
-			// ----
+					if (data.data) {
+						alert("successful login!");
+						history.push("/profile");
+
+						// do another fetch request using data.userId to get complete user details
+						// then use that user details object to keep the user logged in.
+						// fetch() here
+						// after fetch save user details somewhere only then you prompt the
+						// login successful and redirect to profile page.
+					} else {
+						alert(data.userDetails);
+						setIsSubmitting(false);
+					}
+				});
 		}
 	}, [errors, history, isSubmitting, values.emailAddress, values.password]);
 
