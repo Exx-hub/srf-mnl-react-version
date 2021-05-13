@@ -17,16 +17,16 @@ export const useRegisterForm = () => {
 
 	const history = useHistory();
 
-	const submit = (e) => {
+	const handleChange = (e) => {
+		const { name, value } = e.target;
+		setValues({ ...values, [name]: value });
+	};
+
+	const handleSubmit = (e) => {
 		e.preventDefault();
 
 		setErrors(validate(values));
 		setIsSubmitting(true);
-	};
-
-	const handleChange = (e) => {
-		const { name, value } = e.target;
-		setValues({ ...values, [name]: value });
 	};
 
 	useEffect(() => {
@@ -37,7 +37,7 @@ export const useRegisterForm = () => {
 		}
 	}, [errors, history, isSubmitting, values]);
 
-	return { values, handleChange, errors, submit };
+	return { values, handleChange, errors, handleSubmit };
 };
 
 //              firstName: values.firstName,

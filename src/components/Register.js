@@ -3,12 +3,12 @@ import Button from "react-bootstrap/Button";
 import { useRegisterForm } from "../customHooks/useRegisterForm";
 
 function Register() {
-	const { handleChange, submit, values, errors } = useRegisterForm();
+	const { handleChange, handleSubmit, values, errors } = useRegisterForm(); // custom hook to handle form data
 
 	return (
 		<div className="register login col-md-5 mr-auto ml-auto">
 			<h2 className="text-center mt-3">SIGN UP</h2>
-			<form className="registerForm" onSubmit={submit}>
+			<form className="registerForm" onSubmit={handleSubmit}>
 				<input
 					className="my-2 p-2 siteInput"
 					type="text"
