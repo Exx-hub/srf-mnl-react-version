@@ -2,8 +2,11 @@ import React from "react";
 import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
 import whiteRec from "../assets/images/whiteRec.png";
+import { useHistory } from "react-router";
 
 function NavBar() {
+	const history = useHistory();
+	const path = history.location.pathname;
 	return (
 		<Navbar id="navbar" collapseOnSelect expand="lg">
 			<Navbar.Brand href="/">
@@ -19,11 +22,21 @@ function NavBar() {
 
 			<Navbar.Collapse id="responsive-navbar-nav">
 				<Nav className="ml-auto">
-					<Nav.Link href="/">HOME</Nav.Link>
-					<Nav.Link href="/courses">COURSES</Nav.Link>
-					<Nav.Link href="/profile">PROFILE</Nav.Link>
-					<Nav.Link href="/register">REGISTER</Nav.Link>
-					<Nav.Link href="/login">LOG IN</Nav.Link>
+					<Nav.Link active={path === "/" && true} href="/">
+						HOME
+					</Nav.Link>
+					<Nav.Link active={path === "/courses" && true} href="/courses">
+						COURSES
+					</Nav.Link>
+					<Nav.Link active={path === "/profile" && true} href="/profile">
+						PROFILE
+					</Nav.Link>
+					<Nav.Link active={path === "/register" && true} href="/register">
+						REGISTER
+					</Nav.Link>
+					<Nav.Link active={path === "/login" && true} href="/login">
+						LOG IN
+					</Nav.Link>
 					{/* <Nav.Link href="#logout">LOG OUT</Nav.Link> */}
 				</Nav>
 			</Navbar.Collapse>
