@@ -25,7 +25,7 @@ export const useLoginform = () => {
 	const getUserDetails = (token) => {
 		console.log(`i am the token: ${token}`);
 
-		fetch(`http://localhost:3001/api/users/details/`, {
+		fetch(`https://backup-capstone-vscode.herokuapp.com/api/users/details/`, {
 			headers: {
 				Authorization: `Bearer ${token}`,
 			},
@@ -43,8 +43,7 @@ export const useLoginform = () => {
 				emailAddress: values.emailAddress,
 				password: values.password,
 			});
-			// https://backup-capstone-vscode.herokuapp.com
-			fetch("http://localhost:3001/api/users/login", {
+			fetch("https://backup-capstone-vscode.herokuapp.com/api/users/login", {
 				method: "POST",
 				headers: {
 					"Content-Type": "application/json",
