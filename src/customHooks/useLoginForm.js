@@ -63,6 +63,7 @@ export const useLoginform = () => {
 						localStorage.setItem("token", data.token); // save token to localstorate
 
 						getUserDetails(localStorage.getItem("token"));
+						// this function should be in the profile section
 
 						history.push("/profile");
 					} else {
