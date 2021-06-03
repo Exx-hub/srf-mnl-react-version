@@ -22,21 +22,6 @@ export const useLoginform = () => {
 		setIsSubmitting(true);
 	};
 
-	const getUserDetails = (token) => {
-		console.log(`i am the token: ${token}`);
-
-		fetch(`https://backup-capstone-vscode.herokuapp.com/api/users/details/`, {
-			headers: {
-				Authorization: `Bearer ${token}`,
-			},
-		})
-			.then((res) => res.json())
-			.then((data) => {
-				console.log(data);
-				// then do something with the user data here
-			});
-	};
-
 	useEffect(() => {
 		if (Object.keys(errors).length === 0 && isSubmitting) {
 			console.log({
@@ -61,11 +46,9 @@ export const useLoginform = () => {
 						alert(data.message);
 
 						localStorage.setItem("token", data.token); // save token to localstorate
-
-						getUserDetails(localStorage.getItem("token"));
-						// this function should be in the profile section
-
+						localStorage.setItem("user", data.user);
 						history.push("/profile");
+						window.location.reload();
 					} else {
 						alert(data.message);
 						setIsSubmitting(false);

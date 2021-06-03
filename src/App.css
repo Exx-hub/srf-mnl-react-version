@@ -152,6 +152,28 @@ body {
 	padding-left: 0;
 } */
 
+/* PROFILE */
+.profile {
+	width: 80%;
+	margin: 0 auto;
+	padding: 20px;
+}
+.profileHeader {
+	font-size: 1rem;
+	margin-top: 20px;
+	margin-bottom: 10px;
+}
+.aboveTable {
+	margin-bottom: 40px;
+}
+.date-enrolled {
+	font-size: 0.8rem;
+}
+.course,
+.status {
+	font-size: 0.9rem;
+}
+
 /* MEDIA QUERIES  */
 
 /* wide laptop */
@@ -244,5 +266,9 @@ body {
 	}
 	.hero-school-course-image {
 		width: 52%;
+	}
+	.profile {
+		width: 100%;
+		padding: 10px;
 	}
 }

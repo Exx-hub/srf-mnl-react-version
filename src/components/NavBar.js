@@ -7,6 +7,17 @@ import { useHistory } from "react-router";
 function NavBar() {
 	const history = useHistory();
 	const path = history.location.pathname;
+	const token = localStorage.getItem("token");
+
+	const handleLogOut = () => {
+		localStorage.clear();
+
+		history.push("/login");
+		window.location.reload();
+	};
+
+	const user = localStorage.getItem("user");
+
 	return (
 		<Navbar id="navbar" collapseOnSelect expand="lg">
 			<Navbar.Brand href="/">
@@ -28,16 +39,24 @@ function NavBar() {
 					<Nav.Link active={path === "/courses" && true} href="/courses">
 						COURSES
 					</Nav.Link>
-					<Nav.Link active={path === "/profile" && true} href="/profile">
-						PROFILE
-					</Nav.Link>
-					<Nav.Link active={path === "/register" && true} href="/register">
-						REGISTER
-					</Nav.Link>
-					<Nav.Link active={path === "/login" && true} href="/login">
-						LOG IN
-					</Nav.Link>
-					{/* <Nav.Link href="#logout">LOG OUT</Nav.Link> */}
+					{token && (
+						<Nav.Link active={path === "/profile" && true} href="/profile">
+							{user ? user : "PROFILE"}
+						</Nav.Link>
+					)}
+					{!token && (
+						<Nav.Link active={path === "/register" && true} href="/register">
+							REGISTER
+						</Nav.Link>
+					)}
+
+					{!token && (
+						<Nav.Link active={path === "/login" && true} href="/login">
+							LOG IN
+						</Nav.Link>
+					)}
+
+					{token && <Nav.Link onClick={handleLogOut}>LOG OUT</Nav.Link>}
 				</Nav>
 			</Navbar.Collapse>
 		</Navbar>
