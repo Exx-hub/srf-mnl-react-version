@@ -22,14 +22,29 @@ export const useLoginform = () => {
 		setIsSubmitting(true);
 	};
 
+	const getUserDetails = (token) => {
+		console.log(`i am the token: ${token}`);
+
+		fetch(`http://localhost:3001/api/users/details/`, {
+			headers: {
+				Authorization: `Bearer ${token}`,
+			},
+		})
+			.then((res) => res.json())
+			.then((data) => {
+				console.log(data);
+				// then do something with the user data here
+			});
+	};
+
 	useEffect(() => {
 		if (Object.keys(errors).length === 0 && isSubmitting) {
 			console.log({
 				emailAddress: values.emailAddress,
 				password: values.password,
 			});
-
-			fetch("https://backup-capstone-vscode.herokuapp.com/api/users/login", {
+			// https://backup-capstone-vscode.herokuapp.com
+			fetch("http://localhost:3001/api/users/login", {
 				method: "POST",
 				headers: {
 					"Content-Type": "application/json",
@@ -43,17 +58,16 @@ export const useLoginform = () => {
 				.then((data) => {
 					console.log(data);
 
-					if (data.data) {
-						alert("successful login!");
-						history.push("/profile");
+					if (data.token) {
+						alert(data.message);
 
-						// do another fetch request using data.userId to get complete user details
-						// then use that user details object to keep the user logged in.
-						// fetch() here
-						// after fetch save user details somewhere only then you prompt the
-						// login successful and redirect to profile page.
+						localStorage.setItem("token", data.token); // save token to localstorate
+
+						getUserDetails(localStorage.getItem("token"));
+
+						history.push("/profile");
 					} else {
-						alert(data.userDetails);
+						alert(data.message);
 						setIsSubmitting(false);
 					}
 				});
