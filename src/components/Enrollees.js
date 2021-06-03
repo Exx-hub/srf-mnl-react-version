@@ -20,8 +20,8 @@ function Enrollees({ enrollees }) {
 					</tr>
 				</thead>
 				<tbody>
-					{enrollees.map((enrollee) => {
-						return <Enrollee key={enrollee._id} enrollee={enrollee} />;
+					{enrollees.map((enrollee, index) => {
+						return <Enrollee key={index} enrollee={enrollee} />;
 					})}
 				</tbody>
 			</Table>

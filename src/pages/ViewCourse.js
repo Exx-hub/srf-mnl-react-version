@@ -8,12 +8,36 @@ import logo from "../assets/images/logo1.png";
 // import Footer from "../components/Footer";
 
 import Enrollees from "../components/Enrollees";
+import { useHistory } from "react-router";
 
 function ViewCourse(props) {
+	const history = useHistory();
 	const { courseId } = props.match.params;
 
 	const [course, setCourse] = useState(null);
-	console.log(course);
+	// console.log(course);
+
+	const handleEnroll = () => {
+		const token = localStorage.getItem("token");
+
+		fetch(`https://backup-capstone-vscode.herokuapp.com/api/users/enroll`, {
+			method: "POST",
+			headers: {
+				"Content-Type": "application/json",
+				Authorization: `Bearer ${token}`,
+			},
+			body: JSON.stringify({
+				courseId: course._id,
+			}),
+		})
+			.then((res) => res.json())
+			.then((data) => {
+				console.log(data);
+				alert(data.message);
+				// window.location.reload();
+				history.push("/profile");
+			});
+	};
 
 	useEffect(() => {
 		fetch(
@@ -34,7 +58,15 @@ function ViewCourse(props) {
 						<h3 className="mt-4">{course.name}</h3>
 						<p>{course.description}</p>
 						<p>₱ {course.price}</p>
-						<Button className="btn-block siteButton">Enroll</Button>
+						<Button className="btn-block siteButton" onClick={handleEnroll}>
+							Enroll
+						</Button>
+						<small
+							style={{ cursor: "pointer" }}
+							onClick={() => history.push("/courses")}
+						>
+							← back
+						</small>
 					</Jumbotron>
 
 					<Enrollees enrollees={course.enrollees} />

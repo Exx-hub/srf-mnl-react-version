@@ -40,8 +40,8 @@ function Profile() {
 							</tr>
 						</thead>
 						<tbody>
-							{user?.enrollments.map((item) => (
-								<tr key={item.courseName}>
+							{user?.enrollments.map((item, index) => (
+								<tr key={index}>
 									<td className="course">{item.courseName}</td>
 									<td className="date-enrolled">
 										{new Date(item.enrolledOn).toLocaleString("en-PH", {
